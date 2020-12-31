@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/oyamli-editor/static/css/main.ca27c850.chunk.css",
-    "main.js": "/oyamli-editor/static/js/main.32f7422e.chunk.js",
-    "main.js.map": "/oyamli-editor/static/js/main.32f7422e.chunk.js.map",
+    "main.js": "/oyamli-editor/static/js/main.9ae0ebc2.chunk.js",
+    "main.js.map": "/oyamli-editor/static/js/main.9ae0ebc2.chunk.js.map",
     "runtime-main.js": "/oyamli-editor/static/js/runtime-main.7df84c9e.js",
     "runtime-main.js.map": "/oyamli-editor/static/js/runtime-main.7df84c9e.js.map",
     "static/css/2.8a55d5d2.chunk.css": "/oyamli-editor/static/css/2.8a55d5d2.chunk.css",
-    "static/js/2.26e35c81.chunk.js": "/oyamli-editor/static/js/2.26e35c81.chunk.js",
-    "static/js/2.26e35c81.chunk.js.map": "/oyamli-editor/static/js/2.26e35c81.chunk.js.map",
+    "static/js/2.9be7c0e7.chunk.js": "/oyamli-editor/static/js/2.9be7c0e7.chunk.js",
+    "static/js/2.9be7c0e7.chunk.js.map": "/oyamli-editor/static/js/2.9be7c0e7.chunk.js.map",
     "index.html": "/oyamli-editor/index.html",
     "static/css/2.8a55d5d2.chunk.css.map": "/oyamli-editor/static/css/2.8a55d5d2.chunk.css.map",
     "static/css/main.ca27c850.chunk.css.map": "/oyamli-editor/static/css/main.ca27c850.chunk.css.map",
-    "static/js/2.26e35c81.chunk.js.LICENSE.txt": "/oyamli-editor/static/js/2.26e35c81.chunk.js.LICENSE.txt"
+    "static/js/2.9be7c0e7.chunk.js.LICENSE.txt": "/oyamli-editor/static/js/2.9be7c0e7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7df84c9e.js",
     "static/css/2.8a55d5d2.chunk.css",
-    "static/js/2.26e35c81.chunk.js",
+    "static/js/2.9be7c0e7.chunk.js",
     "static/css/main.ca27c850.chunk.css",
-    "static/js/main.32f7422e.chunk.js"
+    "static/js/main.9ae0ebc2.chunk.js"
   ]
 }
