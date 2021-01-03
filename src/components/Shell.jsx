@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../App.css';
 import CustomAudioPlayer from './CustomAudioPlayer';
 import CustomTextarea from './CustomTextarea';
+import ContactsBox from './ContactsBox';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import { toast } from 'react-toastify';
 
@@ -12,6 +13,8 @@ function Shell() {
   const [audioSrc, setAudioSrc] = useState();
   const [showAudioPlayer, setShowAudioPlayer] = useState(true);
   const [youtubeUrl, setYoutubeUrl] = useState('');
+  const [timeStamp, setTimeStamp] = useState();
+  const contacts = useRef();
 
   const handleChange = (event) => {
     if (event.target.files && event.target.files.length > 0) {
@@ -23,8 +26,9 @@ function Shell() {
     }
   };
 
-  const handleEscPress = (event) => {
+  const handleKeyPress = (event) => {
     if (file) {
+      event.preventDefault();
       if (event.code === 'Escape') {
         if (audioPlayer.audio.current.paused) {
           audioPlayer.audio.current.play();
@@ -39,6 +43,8 @@ function Shell() {
       } else if (event.code === 'F2') {
         audioPlayer.audio.current.currentTime =
           audioPlayer.audio.current.currentTime + 2;
+      } else if (event.code === 'F4') {
+        setTimeStamp(audioPlayer.audio.current.currentTime);
       }
     }
   };
@@ -65,9 +71,17 @@ function Shell() {
     setYoutubeUrl(event.target.value);
   };
 
+  const onContactsChange = (items) => {
+    contacts.current = items;
+  };
+
+  const onNewMention = () => {
+    return contacts.current || [];
+  };
+
   return (
     <>
-      <div tabIndex="0" className="App" onKeyDown={handleEscPress}>
+      <div tabIndex="0" className="App" onKeyDown={handleKeyPress}>
         <div className="audio_container">
           <input
             className="input"
@@ -103,6 +117,7 @@ function Shell() {
                   <div className="rewindshortcut">F1</div>
                   <div className="playshortcut">Esc</div>
                   <div className="forwardshortcut">F2</div>
+                  <div className="timestampshortcut">F4</div>
                 </div>
               )}
             </>
@@ -119,8 +134,10 @@ function Shell() {
             </div>
           )}
         </div>
-        {/* <textarea id="yamli_textbox_id"></textarea> */}
-        <CustomTextarea />
+        <div className="editorWrapper">
+          <CustomTextarea timeStamp={timeStamp} onNewMention={onNewMention} />
+          <ContactsBox onContactsChange={onContactsChange} />
+        </div>
       </div>
     </>
   );

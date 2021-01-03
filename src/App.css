@@ -35,7 +35,7 @@
   margin-top: -25px;
   display: grid;
   grid-column-gap: 3px;
-  grid-template-columns: 40px 40px 40px;
+  grid-template-columns: 40px 40px 40px 40px;
 }
 
 .shortcuts {
@@ -45,7 +45,7 @@
   margin-top: -25px;
   display: grid;
   grid-column-gap: 3px;
-  grid-template-columns: 40px 40px 40px;
+  grid-template-columns: 40px 40px 40px 40px;
 }
 
 .input {
@@ -139,4 +139,74 @@
   width: 20px;
   height: 20px;
   content: "b";
+}
+
+.ck.ck-editor__editable_inline {
+  height: 400px !important;
+  padding-bottom: 40px;
+}
+
+.contactsBoxHeader {
+  width: 212px;
+  text-align: left;
+  border: 1px solid #c4c4c4;
+  padding: 10px;
+  min-height: 160px;
+}
+
+.contactsInputContainer {
+  margin: 10px 0px;
+  display: flex;
+}
+
+.contactInput {
+  margin: 0px 10px 0px 0px;
+  height: 20px;
+}
+
+.contactAdd {
+  font-weight: bold;
+  height: 24px;
+  width: 24px;
+}
+
+.emptyContact {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.inputError {
+  color: red;
+  font-size: 12px;
+}
+
+.contactItem {
+  padding: 0px 10px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.contactItem:hover {
+  background-color: #c4c4c4;
+}
+
+.contactDelete {
+  background: none;
+  border: 0;
+  color: red;
+  font-size: 18px;
+}
+
+.contactDelete:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.editorWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ck.ck-editor {
+  width: 80% !important;
 }
