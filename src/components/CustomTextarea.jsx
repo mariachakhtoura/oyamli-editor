@@ -7,7 +7,7 @@ const CustomTextarea = ({ timeStamp, onNewMention }) => {
   const [editor, setEditor] = useState();
 
   useEffect(() => {
-    if (editor && timeStamp !== '') {
+    if (editor && timeStamp) {
       const data = editor.getData();
       // const first = editor.model.document.selection.getFirstPosition();
       editor.model.change((writer) => {
@@ -80,12 +80,17 @@ const CustomTextarea = ({ timeStamp, onNewMention }) => {
         mention: {
           feeds: [
             {
+              marker: /\?$/,
+              feed: ['?', '؟'],
+              minimumCharacters: 1,
+            },
+            {
               marker: /@\b(\w+)\b$/,
               feed: onNewMention,
               minimumCharacters: 1,
             },
             {
-              marker: /\b(?<!@)(\w+)\b$/,
+              marker: /\b(?<!@\?)(\w+)\b$/,
               feed: getFeedItems,
               minimumCharacters: 1,
             },
