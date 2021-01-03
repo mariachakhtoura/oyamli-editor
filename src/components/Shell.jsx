@@ -28,22 +28,26 @@ function Shell() {
 
   const handleKeyPress = (event) => {
     if (file) {
-      event.preventDefault();
       if (event.code === 'Escape') {
+        event.preventDefault();
         if (audioPlayer.audio.current.paused) {
           audioPlayer.audio.current.play();
         } else {
+          event.preventDefault();
           audioPlayer.audio.current.pause();
           audioPlayer.audio.current.currentTime =
             audioPlayer.audio.current.currentTime - 1;
         }
       } else if (event.code === 'F1') {
+        event.preventDefault();
         audioPlayer.audio.current.currentTime =
           audioPlayer.audio.current.currentTime - 2;
       } else if (event.code === 'F2') {
+        event.preventDefault();
         audioPlayer.audio.current.currentTime =
           audioPlayer.audio.current.currentTime + 2;
       } else if (event.code === 'F4') {
+        event.preventDefault();
         setTimeStamp(audioPlayer.audio.current.currentTime);
       }
     }
